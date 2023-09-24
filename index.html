@@ -393,33 +393,54 @@
             </li>
           </ul>
           </div>
+          <form>
+          Subscribe
+          <input class="footer-subscribe" type="text" placeholder="E-mail">
+        </form>
+        <button class="subscribe-button" type="submit">Subscribe
+          <svg class="submit-button-svg">
+            <use href="./images/icons/modal.svg#subscribe"></use>
+          </svg>
+        </button>
         </div>
       </footer>
 
       <div class="modal is-hidden" data-modal>
         <div class="modal-content">
-          <h2 class="user-contact-heading">Leave your information and we'll call you back</h2>
+          <h2 class="user-contact-heading">Leave your contacts and we will call you back</h2>
           <form class="user-contact">
-            <label>
-              Name
-              <input type="text" placeholder="Full Name" name="full_name">
+            <label class="user-contact-field">
+              <span class="user-contact-label">Name</span>
+              <input type="text" name="full_name">
+              <svg class="user-contact-field-icon">
+                <use href="./images/icons/modal.svg#name-icon">
+              </svg>
+            </label>
+            <label class="user-contact-field">
+              <span class="user-contact-label">Telephone</span>
+              <input type="tel" name="phone">
+              <svg class="user-contact-field-icon">
+                <use href="./images/icons/modal.svg#phone">
+              </svg>
+            </label>
+            <label class="user-contact-field">
+              <span class="user-contact-label">E-mail</span>
+              <input type="email" name="email">
+              <svg class="user-contact-field-icon">
+                <use href="./images/icons/modal.svg#mail">
+              </svg>
             </label>
 
-            <label>
-              Telephone
-              <input type="tel" placeholder="phone" name="phone">
+            <label class="user-contact-comment user-contact-field">
+              <Span class="user-contact-label">Comments</Span>
+              <textarea name="comments" cols="30" rows="10" placeholder="Text input"></textarea>
             </label>
 
-            <label>
-              E-mail
-              <input type="email" placeholder="user@domain.com" name="email">
-            </label>
-
-            <label class="user-contact-checkbox">
+            <label class="user-contact-checkbox user-contact-field">
               <input type="checkbox" name="check">
-              I agree with the newsletter and accept the terms
+              I accept the terms and conditions of the<span class="user-contact-span"> Privacy Policy</span>
             </label>
-           <button type="submit">Send</button>
+           <button class="user-contact-button type="submit">Send</button>
             
           </form>
           <button class="modal-close" data-modal-close>
