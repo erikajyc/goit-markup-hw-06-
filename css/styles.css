@@ -609,7 +609,7 @@ h2 {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transform: none;
     transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 24px 0px 24px;
  }
 
 
@@ -665,15 +665,10 @@ h2 {
     font-family: Roboto;
  }
 
- .user-contact-heading {
-    margin-top: 32px;
-    margin-bottom: 0px;
-
- }
 
  .user-contact-field {
     display: block;
-    margin-top: 8px;
+
     position: relative;
     margin-top: 16px;
     font-family: Roboto;
@@ -718,8 +713,8 @@ h2 {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
-    margin-top: 0px;
- }
+    margin-bottom: 0px;
+ }  
  
  .user-contact-label {
     position: absolute;
@@ -727,8 +722,11 @@ h2 {
     font-size: 12px;
     letter-spacing: 0.48px;
     color: var(--light-slate);
+    padding-top: 8px;
  }
-
+.user-contact-input {
+        margin-top: 8px;
+}
  .user-contact-button {
     width: 169px;
     height: 56px;
@@ -746,6 +744,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    margin-top: 24px;
     margin-bottom: 24px;
  }
 
@@ -799,3 +798,59 @@ h2 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background: var(--NAVY-BLUE, #2E2F42);
  }
+
+ user-contact-check {
+    width: 16px;
+    height: 16px;
+ }
+
+ .checkbox-text {
+    color: var(--navyblue)
+ }
+
+ .privacy-policy {
+    color: var(--iris);
+    text-decoration: underline;
+ }
+
+ .checkbox-icon {
+    width: 16px;
+    height: 16px;
+ }
+
+ .checkbox-label {
+    background-color: var(--cloud);
+    color: var(--white);
+    cursor: pointer;
+    height: 16px;
+    position: relative;
+ }
+
+
+ .checkbox-icon {
+    width: 16px;
+    height: 14px;
+    border: 1px solid var(--light-slate);
+    border-radius: 2px;
+    padding: 2px;
+    fill: currentColor;
+    background-color: var(--white);
+ }
+
+  .visually-hidden {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      opacity: 0;
+      overflow: hidden;
+  }
+
+  .checkbox-input:checked + .checkbox-icon {
+    background-color: var(--ocean);
+    border-color: var(--ocean);
+  }

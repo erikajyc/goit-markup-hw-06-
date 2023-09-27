@@ -411,34 +411,42 @@
           <form class="user-contact">
             <label class="user-contact-field">
               <span class="user-contact-label">Name</span>
-              <input type="text" name="full_name">
+              <input type="text" name="full_name" required>
               <svg class="user-contact-field-icon">
-                <use href="./images/icons/modal.svg#name-icon">
+                <use class="user-contact-input" href="./images/icons/modal.svg#name-icon">
               </svg>
             </label>
             <label class="user-contact-field">
-              <span class="user-contact-label">Telephone</span>
-              <input type="tel" name="phone">
+              <span class="user-contact-label label">Phone</span>
+              <input class="user-contact-input" type="tel" name="phone" required>
               <svg class="user-contact-field-icon">
                 <use href="./images/icons/modal.svg#phone">
               </svg>
             </label>
             <label class="user-contact-field">
-              <span class="user-contact-label">E-mail</span>
-              <input type="email" name="email">
+              <span class="user-contact-label label">E-mail</span>
+              <input class="user-contact-input" type="email" name="email" required>
               <svg class="user-contact-field-icon">
                 <use href="./images/icons/modal.svg#mail">
               </svg>
             </label>
 
             <label class="user-contact-comment user-contact-field">
-              <Span class="user-contact-label">Comments</Span>
+              <Span class="user-contact-label label">Comments</Span>
               <textarea name="comments" cols="30" rows="10" placeholder="Text input"></textarea>
             </label>
 
-            <label class="user-contact-checkbox user-contact-field">
-              <input type="checkbox" name="check">
-              I accept the terms and conditions of the<span class="user-contact-span"> Privacy Policy</span>
+            <label for="terms" class="user-contact-field checkbox-label">
+              <input type="checkbox" name="check" class="checkbox-input visually-hidden">
+              <svg class="checkbox-icon">
+                  <use href="./images/icons/modal.svg#check"></use>
+              </svg>
+              <span class="checkbox-text">
+              I accept the terms and conditions of the 
+              <span class="privacy-policy">
+                Privacy Policy
+              </span> 
+            </span>
             </label>
            <button class="user-contact-button type="submit">Send</button>
             
