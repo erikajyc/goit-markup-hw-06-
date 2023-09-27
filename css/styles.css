@@ -722,7 +722,7 @@ h2 {
     font-size: 12px;
     letter-spacing: 0.48px;
     color: var(--light-slate);
-    padding-top: 8px;
+    margin-top: 8px;
  }
 .user-contact-input {
         margin-top: 8px;
@@ -748,6 +748,10 @@ h2 {
     margin-bottom: 24px;
  }
 
+ .user-contact-button:hover {
+    background-color: var(--ocean);
+    cursor: pointer;
+ }
  .user-contact-field-icon {
     width: 18px;
     height: 18px;
@@ -755,6 +759,17 @@ h2 {
     left: 12px;
     transform: translateY(-28px);
  }
+
+.user-contact-input:focus,
+textarea:focus{
+    border-color: var(--iris);
+    outline: 0;
+}
+
+.user-contact-input:hover,
+textarea:hover {
+    border-color: var(--iris);
+}
 
  .user-contact-span {
     color: var(--IRIS, #4D5AE5);
