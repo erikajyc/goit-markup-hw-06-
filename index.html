@@ -17,7 +17,7 @@
       <header class="header">
         <div class="container-header container">
         <nav class="header-nav">
-          <a class="header-nav-logo" href="/goit-markup-hw-05/index.html">WEB<span class="span-logo">STUDIO</span></a>
+          <a class="header-nav-logo" href="/goit-markup-hw-06/index.html">WEB<span class="span-logo">STUDIO</span></a>
           <ul class="nav-list">
             <li class="nav-list-item">
               <a class="header-nav-links" href="./index.html">Studio</a>
@@ -353,7 +353,7 @@
       <footer class="section footer">
         <div class="container footer-container">
         <div>
-        <a class="header-nav-logo footer-logo" href="/goit-markup-hw-05/">WEB<span class="span-logo-footer">STUDIO</span></a>
+        <a class="header-nav-logo footer-logo" href="/goit-markup-hw-06/">WEB<span class="span-logo-footer">STUDIO</span></a>
         <p class="footer-caption">
           Increase the flow of customers and <br>
           sales for your business with digital <br>
@@ -393,15 +393,16 @@
             </li>
           </ul>
           </div>
-          <form>
+          <form class="subscribe">
           Subscribe
-          <input class="footer-subscribe" type="text" placeholder="E-mail">
+          <input class="footer-subscribe" type="text" name="email" placeholder="E-mail" required>
+          <button class="subscribe-button" type="submit">Subscribe
+            <svg class="submit-button-svg">
+              <use href="./images/icons/modal.svg#subscribe"></use>
+            </svg>
+          </button>
         </form>
-        <button class="subscribe-button" type="submit">Subscribe
-          <svg class="submit-button-svg">
-            <use href="./images/icons/modal.svg#subscribe"></use>
-          </svg>
-        </button>
+        
         </div>
       </footer>
 
@@ -433,11 +434,11 @@
 
             <label class="user-contact-comment user-contact-field">
               <Span class="user-contact-label label">Comments</Span>
-              <textarea name="comments" cols="30" rows="10" placeholder="Text input"></textarea>
+              <textarea name="comments" cols="30" rows="5" placeholder="Text input"></textarea>
             </label>
 
-            <label for="terms" class="user-contact-field checkbox-label">
-              <input type="checkbox" name="check" class="checkbox-input visually-hidden">
+            <label class="user-contact-field-check checkbox-label">
+              <input class="checkbox-input visually-hidden" type="checkbox">
               <svg class="checkbox-icon">
                   <use href="./images/icons/modal.svg#check"></use>
               </svg>
@@ -448,14 +449,13 @@
               </span> 
             </span>
             </label>
-           <button class="user-contact-button type="submit">Send</button>
-            
+           <button class="user-contact-button" type="submit">Send</button>
+           <button class="modal-close" data-modal-close>
+            <svg class="close-svg">
+               <use href="./images/icons/button.svg#close" />
+            </svg>
+           </button>
           </form>
-          <button class="modal-close" data-modal-close>
-           <svg>
-              <use href="./images/icons/button.svg#close" />
-           </svg>
-          </button>
         </div>
       </div>
 

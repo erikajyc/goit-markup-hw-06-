@@ -154,6 +154,7 @@ h2 {
     color: var(--white);
     background-color: var(--navyblue);
     flex-shrink: 0;
+    height: 312px;
 }
 
 .footer-caption {
@@ -162,6 +163,8 @@ h2 {
     line-height: 24px;
     letter-spacing: 0.32px;
     margin-top:17.5px;
+    width: 264px;
+    margin-bottom: 0px;
 }
 
 .header-nav-logo {
@@ -599,7 +602,6 @@ h2 {
  .modal-content {
     position: relative;
     width: 408px;
-    height: 584px;
     border-radius: 4px;
     margin: auto;
     background-color: var(--dairy);
@@ -609,7 +611,7 @@ h2 {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transform: none;
     transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 0px 24px;
+    padding: 72px 24px 24px 24px;
  }
 
 
@@ -625,12 +627,10 @@ h2 {
     background-color: var(--cornflower);
     margin-top: 24px;
     margin-right: 24px;
-    stroke: 1px var(--navyblue);
     position: absolute;
     left: 90%;
     top: 0%;
     cursor: pointer;
-    color: var(--navyblue);
     transition: background-color var(--transition-duration) 250ms color var(--transition-duration) 250ms;
  }
 
@@ -643,10 +643,14 @@ h2 {
  }
 
  .modal-close:hover {
+    cursor: pointer;
     background-color: var(--ocean);
     border-color: var(--ocean);
-    stroke: var(--cloud);
  }
+
+ .modal-close:hover .close-svg use {
+    fill: white; 
+}
 
  .modal.is-hidden {
     visibility: hidden;
@@ -660,36 +664,38 @@ h2 {
 
 
 
- .user-contact {
+ /* .user-contact {
     padding-top: 16px;
     font-family: Roboto;
- }
+ } */
 
 
  .user-contact-field {
     display: block;
-
     position: relative;
-    margin-top: 16px;
-    font-family: Roboto;
+    margin-top: 5px;
     font-size: 12px;
  }
 
- .user-contact-field:first-child {
+ /* .user-contact-field:first-child {
     margin-top: 16px;
- }
+ } */
 
- .user-contact input,
+
+ .user-contact .user-contact-input,
  .user-contact textarea {
-    display: block ;
     width: 100%;
     margin-top: 8px;
     padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--navy-blue-modal);
  }
 
- .user-contact input {
+ .user-contact .user-contact-input {
     padding-left: 38px;
+    height: 40px;
  }
+
  .user-contact textarea {
     resize: none;
  }
@@ -713,20 +719,16 @@ h2 {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
  }  
  
  .user-contact-label {
-    position: absolute;
-    bottom: calc(100% + 4px);
     font-size: 12px;
     letter-spacing: 0.48px;
     color: var(--light-slate);
-    margin-top: 8px;
  }
-.user-contact-input {
-        margin-top: 8px;
-}
+ 
+
  .user-contact-button {
     width: 169px;
     height: 56px;
@@ -744,8 +746,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
-    margin-top: 24px;
     margin-bottom: 24px;
+    margin-top: 24px;
  }
 
  .user-contact-button:hover {
@@ -757,18 +759,27 @@ h2 {
     height: 18px;
     position: absolute;
     left: 12px;
-    transform: translateY(-28px);
+    top: 32px;
+    fill: var(--navyblue);
  }
 
-.user-contact-input:focus,
+
+
+/* .user-contact-input:focus,
 textarea:focus{
+    border-color: var(--iris);
+    outline: 0;
+} */
+
+.user-contact-input:hover,
+textarea:hover, .user-contact-input:focus,
+textarea:focus  {
     border-color: var(--iris);
     outline: 0;
 }
 
-.user-contact-input:hover,
-textarea:hover {
-    border-color: var(--iris);
+.user-contact-input:hover + .user-contact-field-icon use, .user-contact-input:focus + .user-contact-field-icon use {
+    fill: var(--iris);
 }
 
  .user-contact-span {
@@ -784,20 +795,28 @@ textarea:hover {
 
  .subscribe-button {
     width: 165px;
-    height: 100%;
     font-size: 16px;
     justify-content: center;
     align-items: center;
     color: var(--white);
     border-radius: 4px;
-    background: var(--IRIS, #4D5AE5);
+    background: var(--iris);
     border: 0px;
-    display: inline-flex;
+    display: flex;
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
     gap: 16px;
+    cursor: pointer;
+    margin-top: -40px;
+    margin-left: 289px;
  }
+
+
+ .subscribe-button:hover {
+    background-color: var(--ocean);
+ }
+
 
  .submit-button-svg {
     width: 24px;
@@ -805,64 +824,74 @@ textarea:hover {
  }
 
  .footer-subscribe {
+    display: flex;
     width: 264px;
     height: 40px;
-    margin-top: 16px    ;
+    margin-top: 16px;
     border-radius: 4px;
-    border: 1px solid var(--WHITE, #FFF);
+    border: 1px solid var(--white);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background: var(--NAVY-BLUE, #2E2F42);
+    background: var(--NAVY-BLUE);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    outline: 0;
  }
 
- user-contact-check {
-    width: 16px;
-    height: 16px;
- }
 
- .checkbox-text {
-    color: var(--navyblue)
- }
-
+ 
  .privacy-policy {
     color: var(--iris);
     text-decoration: underline;
  }
 
- .checkbox-icon {
-    width: 16px;
-    height: 16px;
+
+ .checkbox-text {
+    color: var(--light-slate);
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-style: normal;
+    line-height: 14px;
+    letter-spacing: 0.48px;
  }
 
  .checkbox-label {
-    background-color: var(--cloud);
+    display: flex;
     color: var(--white);
     cursor: pointer;
     height: 16px;
     position: relative;
+    margin-top: 16px;
  }
 
 
  .checkbox-icon {
     width: 16px;
-    height: 14px;
+    height: 15px;
     border: 1px solid var(--light-slate);
     border-radius: 2px;
+    margin-right: 7px;
+    top: 40px;
     padding: 2px;
     fill: currentColor;
     background-color: var(--white);
  }
 
+ .subscribe input[type="text"] {
+    color: var(--white);
+  }
   .visually-hidden {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      opacity: 0;
-      overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
   }
 
   .checkbox-input:checked + .checkbox-icon {
